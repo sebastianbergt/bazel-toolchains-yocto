@@ -5,6 +5,10 @@ workspace(
 load(":internal_deps.bzl", "bazel_toolchains_yocto_internal_deps")
 
 # Fetch deps needed only locally for development
+local_yocto_toolchain(
+    name = "yocto-local",
+)
+
 bazel_toolchains_yocto_internal_deps()
 
 load("//yocto:repositories.bzl", "bazel_toolchains_yocto_dependencies")
